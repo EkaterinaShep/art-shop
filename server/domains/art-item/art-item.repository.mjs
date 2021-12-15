@@ -1,7 +1,8 @@
-import { ArtItem } from '../../db/models/art-item.model.mjs';
+import { ArtItem } from './art-item.model.mjs';
 
 async function getAll({ limit, offset }) {
-  return await ArtItem.findAndCountAll({ limit, offset });
+  // TODO: find and count all
+  return await ArtItem.findAll({ limit, offset });
 }
 
 async function addArtItem(artItem) {

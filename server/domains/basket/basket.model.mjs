@@ -1,4 +1,4 @@
-import { db } from '../db.mjs';
+import { db } from '../../db/db.mjs';
 import DataTypes from 'sequelize';
 
 const Basket = db.define('Basket', {

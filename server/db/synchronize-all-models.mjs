@@ -1,5 +1,5 @@
 async function synchronizeAllModels(db) {
-  await db.sync({ alter: true });
+  await db.sync({ force: true });
 }
 
 export { synchronizeAllModels };

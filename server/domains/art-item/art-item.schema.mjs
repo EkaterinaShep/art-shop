@@ -16,7 +16,7 @@ const artItemBodySchema = {
         encoding: { type: 'string' },
         filename: { type: 'string' },
         limit: { type: 'boolean' },
-        mimetype: { type: 'string', enum: ['image/png', "image/jpeg"] },
+        mimetype: { type: 'string', enum: ['image/png', 'image/jpeg'] },
       },
     },
     description: {
@@ -54,12 +54,12 @@ const artItemQuerySchema = {
     limit: {
       type: 'integer',
       minimum: 1,
-      default: 1,
+      default: 10,
     },
     page: {
       type: 'integer',
       minimum: 1,
-      default: 1,
+      default: 10,
     },
   },
 };
