@@ -1,0 +1,16 @@
+@import '../../sass/variables.scss';
+
+.btn {
+  max-width: 165px;
+  width: 100%;
+  padding: 15px 0;
+  font: inherit;
+  font-size: 22px;
+  color: #{$secondary};
+  white-space: nowrap;
+  background: #{$accent};
+  border: none;
+  border-radius: 23px;
+  outline: none;
+  cursor: pointer;
+}

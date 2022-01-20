@@ -12,7 +12,9 @@ import { API_URL } from '../../../config/config.mjs';
 import { areEqualPasswords } from './helpers/functions/are-equal-passwords.mjs';
 
 async function getAll() {
-  return userRepo.getAll({ exclude: ['password'] });
+  return userRepo.getAll({
+    exclude: ['password', 'createdAt', 'updatedAt', 'activationLink'],
+  });
 }
 
 async function signUp(reqBody) {

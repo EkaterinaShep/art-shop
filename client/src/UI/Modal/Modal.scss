@@ -1,0 +1,21 @@
+@import '../../sass/variables.scss';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.36);
+
+  &__content {
+    max-width: 400px;
+    width: 100%;
+    padding: 50px 40px 40px;
+    background: #{$primary};
+    border-radius: 50px;
+  }
+}

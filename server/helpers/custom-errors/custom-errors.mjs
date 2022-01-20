@@ -11,7 +11,7 @@ class DuplicateEmailError extends CustomError {
   constructor(message) {
     super(message);
     this.message = message;
-    this.statusCode = 200;
+    this.statusCode = 409;
   }
 }
 

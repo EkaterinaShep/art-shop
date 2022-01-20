@@ -1,0 +1,26 @@
+@import '../sass/variables.scss';
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 47px;
+    text-align: center;
+    color: #{$text-dark};
+  }
+
+  & > .list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__btn,
+  & > .text {
+    align-self: center;
+  }
+}

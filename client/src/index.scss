@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import './sass/variables.scss';
+
+/* Box model styles start*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Box model styles end*/
+/* Mini reset styles start*/
+.body {
+  margin: 0;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.text {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.link {
+  display: inline-block;
+  color: inherit;
+}
+
+
+/* Mini reset styles end*/
+/* Typography styles start*/
+.body {
+  font-family: Karla;
+  font-size: 14px;
+  line-height: 18px;
+  color: #{$text-medium};
+}
+
+/* Typography styles end*/

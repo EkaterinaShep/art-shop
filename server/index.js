@@ -1,6 +1,7 @@
 import multipart from 'fastify-multipart';
 import fastifyStatic from 'fastify-static';
 import fastifyCookie from 'fastify-cookie';
+import fastifyCors from 'fastify-cors';
 import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
 import {
@@ -8,7 +9,7 @@ import {
   listenServer,
   registerRouters,
 } from './helpers/server/index.mjs';
-import { PORT, HOST } from './config/config.mjs';
+import { PORT, HOST, CLIENT_URL  } from './config/config.mjs';
 import { db, connectDb, synchronizeAllModels } from './db/index.mjs';
 import {
   ArtItem,
@@ -38,6 +39,7 @@ server.register(fastifyStatic, {
   decorateReply: false,
 });
 server.register(fastifyCookie);
+server.register(fastifyCors, { credentials: true, origin: CLIENT_URL });
 registerRouters(server, routers);
 
 /* -------------------------- Error handler setting ------------------------- */
